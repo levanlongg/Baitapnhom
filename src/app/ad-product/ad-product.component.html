@@ -300,44 +300,25 @@
 					<h3>Quản lý sản phẩm</h3><br />
 					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add">Thêm+</button>
 					<!-- <button class="btn btn-success">Thêm +</button> -->
-					<div id="add" class="modal fade" role="dialog">
-						<div class="modal-dialog">
-							<!-- Modal content-->
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal">&times;</button>
-									<h4 class="modal-title">Modal Header</h4>
-								</div>
-								<div class="modal-body">
-									<p>Some text in the modal.</p>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-								</div>
-							</div>
-						</div>
-					</div>
 					<div>
 						<table class="table table-bordered">
 							<thead>
 								<tr>
 									<th style="width:20%">Tên SP</th>
-									<th style="width:10%">Hình ảnh</th>
-									<th style="width:10%">Nguồn gốc</th>
-									<th style="width:10%">Số lượng</th>
-									<th style="width:10%">Số lô</th>
+									<th style="width:10%">Mô tả</th>
 									<th style="width:10%">Giá bán</th>
+									<th style="width:10%">Giá bán mới</th>
+									<th style="width:10%">Số lượng</th>
 									<th>Tác vụ</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>John</td>
-									<td>Doe</td>
-									<td>1</td>
-									<td>1</td>
-									<td>1</td>
-									<td>L01</td>
+								<tr  *ngFor="let item of items">
+									<td>{{Name_Product}}</td>
+									<td>{{Desc_Product}}</td>
+									<td>{{Price_Product}}</td>
+									<td>{{PriceNew_Product}}</td>
+									<td>{{Amount_Product}}</td>
 									<td>
 										<button type="button" class="btn btn-info" data-toggle="modal" data-target="#details"><i class="fa fa-eye"
 											aria-hidden="true"></i></button>
@@ -393,7 +374,111 @@
 			  <h4 class="modal-title">Modal Header</h4>
 			</div>
 			<div class="modal-body">
-			  <p>Some text in the modal.</p>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>ID product</p>
+						<input type="text" name="" placeholder="id product">
+					</div>
+					<div class="col-sm-4">
+						<p>ID cateproduct</p>
+						<input type="text" name="" placeholder="id cateproduct">
+					</div>
+					<div class="col-sm-4">
+						<p>ID brand</p>
+						<input type="text" name="" placeholder="id brand">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>code product</p>
+						<input type="text" name="" placeholder="code product">
+					</div>
+					<div class="col-sm-8">
+						<p>Name product</p>
+						<input type="text" name="" placeholder="name_product">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>List Image</p>
+						<input type="text" name="" placeholder="list image">
+					</div>
+					<div class="col-sm-4">
+						<p>Image product</p>
+						<input type="text" name="" placeholder="image_product">
+					</div>
+					<div class="col-sm-4">
+						<p>Price product</p>
+						<input type="text" name="" placeholder="price_product">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>PriceNew Product</p>
+						<input type="text" name="" placeholder="price new image">
+					</div>
+					<div class="col-sm-8">
+						<p>Content product</p>
+						<input type="text" name="" placeholder="content product">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>Amount Product</p>
+						<input type="text" name="" placeholder="amount product">
+					</div>
+					<div class="col-sm-4">
+						<p>Top hot</p>
+						<input type="text" name="" placeholder="top hot">
+					</div>
+					<div class="col-sm-4">
+						<p>View count</p>
+						<input type="text" name="" placeholder="view count">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>View sale</p>
+						<input type="text" name="" placeholder="view sale">
+					</div>
+					<div class="col-sm-4">
+						<p>Color product</p>
+						<input type="text" name="" placeholder="color product">
+					</div>
+					<div class="col-sm-4">
+						<p>Size product</p>
+						<input type="text" name="" placeholder="size product">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>Create date</p>
+						<input type="text" name="" placeholder="create date">
+					</div>
+					<div class="col-sm-4">
+						<p>Create by</p>
+						<input type="text" name="" placeholder="create by">
+					</div>
+					<div class="col-sm-4">
+						<p>Modifie date</p>
+						<input type="text" name="" placeholder="modifie date">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>Modifie by</p>
+						<input type="text" name="" placeholder="create date">
+					</div>
+					<div class="col-sm-4">
+						<p>Discount product</p>
+						<input type="text" name="" placeholder="create by">
+					</div>
+					<div class="col-sm-4">
+						<p>Status</p>
+						<input type="text" name="" placeholder="modifie date">
+					</div>
+				</div>
+				
 			</div>
 			<div class="modal-footer">
 			  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -412,7 +497,111 @@
 			  <h4 class="modal-title">Modal Header</h4>
 			</div>
 			<div class="modal-body">
-			  <p>Some text in the modal.</p>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>ID product</p>
+						<input type="text" name="" placeholder="id product">
+					</div>
+					<div class="col-sm-4">
+						<p>ID cateproduct</p>
+						<input type="text" name="" placeholder="id cateproduct">
+					</div>
+					<div class="col-sm-4">
+						<p>ID brand</p>
+						<input type="text" name="" placeholder="id brand">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>code product</p>
+						<input type="text" name="" placeholder="code product">
+					</div>
+					<div class="col-sm-8">
+						<p>Name product</p>
+						<input type="text" name="" placeholder="name_product">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>List Image</p>
+						<input type="text" name="" placeholder="list image">
+					</div>
+					<div class="col-sm-4">
+						<p>Image product</p>
+						<input type="text" name="" placeholder="image_product">
+					</div>
+					<div class="col-sm-4">
+						<p>Price product</p>
+						<input type="text" name="" placeholder="price_product">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>PriceNew Product</p>
+						<input type="text" name="" placeholder="price new image">
+					</div>
+					<div class="col-sm-8">
+						<p>Content product</p>
+						<input type="text" name="" placeholder="content product">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>Amount Product</p>
+						<input type="text" name="" placeholder="amount product">
+					</div>
+					<div class="col-sm-4">
+						<p>Top hot</p>
+						<input type="text" name="" placeholder="top hot">
+					</div>
+					<div class="col-sm-4">
+						<p>View count</p>
+						<input type="text" name="" placeholder="view count">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>View sale</p>
+						<input type="text" name="" placeholder="view sale">
+					</div>
+					<div class="col-sm-4">
+						<p>Color product</p>
+						<input type="text" name="" placeholder="color product">
+					</div>
+					<div class="col-sm-4">
+						<p>Size product</p>
+						<input type="text" name="" placeholder="size product">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>Create date</p>
+						<input type="text" name="" placeholder="create date">
+					</div>
+					<div class="col-sm-4">
+						<p>Create by</p>
+						<input type="text" name="" placeholder="create by">
+					</div>
+					<div class="col-sm-4">
+						<p>Modifie date</p>
+						<input type="text" name="" placeholder="modifie date">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>Modifie by</p>
+						<input type="text" name="" placeholder="create date">
+					</div>
+					<div class="col-sm-4">
+						<p>Discount product</p>
+						<input type="text" name="" placeholder="create by">
+					</div>
+					<div class="col-sm-4">
+						<p>Status</p>
+						<input type="text" name="" placeholder="modifie date">
+					</div>
+				</div>
+				
 			</div>
 			<div class="modal-footer">
 			  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -421,3 +610,128 @@
 		</div>
 	  </div>
 	<!--EndEdit-->
+	<!--add-->
+	<div id="add" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Thêm sản phẩm</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-4">
+							<p>ID product</p>
+							<input type="text" name="" placeholder="id product">
+						</div>
+						<div class="col-sm-4">
+							<p>ID cateproduct</p>
+							<input type="text" name="" placeholder="id cateproduct">
+						</div>
+						<div class="col-sm-4">
+							<p>ID brand</p>
+							<input type="text" name="" placeholder="id brand">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<p>code product</p>
+							<input type="text" name="" placeholder="code product">
+						</div>
+						<div class="col-sm-8">
+							<p>Name product</p>
+							<input type="text" name="" placeholder="name_product">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<p>List Image</p>
+							<input type="text" name="" placeholder="list image">
+						</div>
+						<div class="col-sm-4">
+							<p>Image product</p>
+							<input type="text" name="" placeholder="image_product">
+						</div>
+						<div class="col-sm-4">
+							<p>Price product</p>
+							<input type="text" name="" placeholder="price_product">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<p>PriceNew Product</p>
+							<input type="text" name="" placeholder="price new image">
+						</div>
+						<div class="col-sm-8">
+							<p>Content product</p>
+							<input type="text" name="" placeholder="content product">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<p>Amount Product</p>
+							<input type="text" name="" placeholder="amount product">
+						</div>
+						<div class="col-sm-4">
+							<p>Top hot</p>
+							<input type="text" name="" placeholder="top hot">
+						</div>
+						<div class="col-sm-4">
+							<p>View count</p>
+							<input type="text" name="" placeholder="view count">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<p>View sale</p>
+							<input type="text" name="" placeholder="view sale">
+						</div>
+						<div class="col-sm-4">
+							<p>Color product</p>
+							<input type="text" name="" placeholder="color product">
+						</div>
+						<div class="col-sm-4">
+							<p>Size product</p>
+							<input type="text" name="" placeholder="size product">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<p>Create date</p>
+							<input type="text" name="" placeholder="create date">
+						</div>
+						<div class="col-sm-4">
+							<p>Create by</p>
+							<input type="text" name="" placeholder="create by">
+						</div>
+						<div class="col-sm-4">
+							<p>Modifie date</p>
+							<input type="text" name="" placeholder="modifie date">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<p>Modifie by</p>
+							<input type="text" name="" placeholder="create date">
+						</div>
+						<div class="col-sm-4">
+							<p>Discount product</p>
+							<input type="text" name="" placeholder="create by">
+						</div>
+						<div class="col-sm-4">
+							<p>Status</p>
+							<input type="text" name="" placeholder="modifie date">
+						</div>
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--endadd-->
+	

@@ -15,6 +15,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [AdProductComponent],
   imports: [
+    CommonModule,
     RouterModule.forChild(routes),
   ]
 })
