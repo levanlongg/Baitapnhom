@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 })
 export class AdProductService {
 
-  public urlAPI = "http://localhost:61487/api/Clothes_Product";
+  public urlAPI = "http://localhost:61487/api/Clothes_Product/GetClothes_Product";
   constructor(private _http: HttpClient) { }
   
   getList(): Observable<any[]>{
